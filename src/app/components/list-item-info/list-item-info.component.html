@@ -1,0 +1,9 @@
+<app-navbar></app-navbar>
+<div class="container mt-5">
+    <button class="btn btn-primary" routerLink="/home">To the list...</button>
+    <div class="card mt-3" [ngClass]="{'text-white bg-success': task.completed}">
+        <div class="card-body">
+            <p class="card-text">{{ task.title }}</p>
+        </div>
+    </div>
+</div>

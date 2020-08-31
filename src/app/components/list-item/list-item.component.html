@@ -1,0 +1,10 @@
+<div class="card mt-3" [ngClass]="{'text-white bg-success': task.completed}">
+    <div class="card-body">
+        <p class="card-text">{{ task.title }}</p>
+        <button class="btn btn-primary mr-2" (click)="editTask()">Edit</button>
+        <button class="btn btn-danger mr-2" (click)="deleteTask()">Delete</button>
+        <button class="btn btn-danger mr-2" routerLink="/task/{{task.id}}">Show</button>
+        <button class="btn btn-primary" [ngClass]="{'btn-success': !task.completed, 'btn-primary': task.completed}"
+        (click)="task.completed = !task.completed;">{{ task.completed ? 'Incomplete' : 'Complete' }}</button>
+    </div>
+</div>
